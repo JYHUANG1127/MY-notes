@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "HJY's NOTES",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -27,28 +27,28 @@ const config: QuartzConfig = {
         body: "Source Sans Pro",
         code: "IBM Plex Mono",
       },
-      colors: {
+  colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          light: "#fdfcf0",       // 背景：温暖的奶油白
+          lightgray: "#e5e5e5",   // 搜索框边框等小组件
+          gray: "#b8b8b8",        // 时间、字数等辅助文字
+          darkgray: "#4e4e4e",    // 正文颜色
+          dark: "#2b2b2b",        // 标题颜色
+          secondary: "#a63d40",   // 链接和侧边栏选中的颜色（圣诞红）
+          tertiary: "#4a5d23",    // 鼠标悬停时的链接颜色（森林绿）
+          highlight: "rgba(166, 61, 64, 0.1)", // 选中背景色
+          textHighlight: "#a63d40",            // 补上这一行：选中文字的颜色
         },
         darkMode: {
-          light: "#161618",
+          light: "#1a1b1e",       // 背景：深灰近黑
           lightgray: "#393639",
           gray: "#646464",
           darkgray: "#d4d4d4",
           dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          secondary: "#e67e22",   // 暖橙色（烛光感）
+          tertiary: "#f1c40f",    // 明黄色
+          highlight: "rgba(230, 126, 34, 0.15)",
+          textHighlight: "#e67e22",            // 补上这一行：选中文字的颜色
         },
       },
     },

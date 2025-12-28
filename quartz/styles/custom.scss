@@ -1,3 +1,58 @@
 @use "./base.scss";
+/* 让图片带圆角和淡淡的阴影，更有立体感 */
+img {
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
 
+/* 鼠标悬停在图片上时轻微放大，增加交互感 */
+img:hover {
+  transform: scale(1.02);
+}
+
+/* 让侧边栏的文件夹名字更有呼吸感 */
+.folder-container {
+  padding: 4px 0;
+}
+
+/* 调整正文行高，让长篇笔记读起来不累 */
+p, li {
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+}
+
+/* 给代码块增加一点圆角 */
+code, pre {
+  border-radius: 8px !important;
+}
+/* 网站左上角标题特效 */
+.page-title {
+  margin: 0;
+  
+  a {
+    font-weight: 800;            // 加粗字体
+    color: var(--secondary);     // 使用我们设置的圣诞红
+    text-decoration: none;
+    transition: all 0.3s ease;   // 增加平滑过渡效果
+    
+    /* 默认状态：淡淡的发光 */
+    text-shadow: 0 0 8px rgba(166, 61, 64, 0.2);
+    
+    &:hover {
+      /* 鼠标悬停时：强力发光效果 */
+      color: var(--secondary);
+      text-shadow: 
+        0 0 10px rgba(166, 61, 64, 0.5), 
+        0 0 20px rgba(166, 61, 64, 0.3),
+        0 0 30px rgba(166, 61, 64, 0.2);
+      transform: translateY(-1px); // 悬停时轻微向上跳动
+    }
+  }
+}
+
+/* 如果是黑夜模式，发光可以更亮一点 */
+[aria-content-mode="dark"] .page-title a {
+  text-shadow: 0 0 10px rgba(230, 126, 34, 0.4); // 黑夜模式使用暖橙色光
+}
 // put your custom CSS here!

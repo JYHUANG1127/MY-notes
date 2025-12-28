@@ -41,9 +41,14 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer(),
   ],
   right: [
-    Component.Graph(),
+    Component.Darkmode(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
+    // 方案 B：最近更新组件
+    Component.RecentNotes({
+      title: "📅 最近的转码动态",
+      limit: 5,
+    }),
   ],
 }
 
