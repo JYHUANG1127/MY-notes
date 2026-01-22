@@ -1,5 +1,5 @@
 ---
-title: 🎄 Welcome to HJY's CODING DIARY
+title: "Welcome to HJY's CODING DIARY"
 ---
 
 ![[welcome.jpg|600]]
