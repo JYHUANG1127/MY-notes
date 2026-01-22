@@ -38,7 +38,23 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      sortFn: (a, b) => {
+        // 使用 (a as any) 告诉电脑：别管类型了，听我的，这里面肯定有 file
+        const orderA = (a as any).file?.frontmatter?.order ?? 100
+        const orderB = (b as any).file?.frontmatter?.order ?? 100
+
+        if (orderA !== orderB) {
+          return orderA - orderB
+        }
+
+        // 如果 order 相同，则按文件夹/文件显示名称排序
+        return a.displayName.localeCompare(b.displayName, undefined, {
+          numeric: true,
+          sensitivity: "base",
+        })
+      },
+    }),
   ],
   right: [
     Component.Darkmode(),

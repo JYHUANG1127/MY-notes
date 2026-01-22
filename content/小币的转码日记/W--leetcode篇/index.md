@@ -1,4 +1,4 @@
 ---
 title: "💡 LeetCode 刷题录"
-order: 5
+order: 6
 ---
