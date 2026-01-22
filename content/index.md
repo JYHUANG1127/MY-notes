@@ -2,7 +2,7 @@
 title: "Welcome to HJY's CODING DIARY"
 ---
 
-![[welcome.jpg|600]]
+![[xiaohuang.jpg|600]]
 
 # 👋 欢迎来到我的数字花园
 
